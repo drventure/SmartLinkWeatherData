@@ -1,0 +1,128 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.wunderground.com/api/70d670ad87b0564a/forecast/q/76034.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.wunderground.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache/2.2.15 (CentOS)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Creationtime:
+      - '0.041'
+      Last-Modified:
+      - Fri, 20 Mar 2015 14:08:35 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Fri, 20 Mar 2015 14:08:36 GMT
+      Cache-Control:
+      - max-age=0, no-cache
+      Pragma:
+      - no-cache
+      Date:
+      - Fri, 20 Mar 2015 14:08:36 GMT
+      Content-Length:
+      - '7320'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - DT=1426860515:27667:365-l3; path=/; expires=Fri, 01-Jan-2020 00:00:00 GMT;
+        domain=.wunderground.com
+    body:
+      encoding: UTF-8
+      string: "\n{\n  \"response\": {\n  \"version\":\"0.1\",\n  \"termsofService\":\"http://www.wunderground.com/weather/api/d/terms.html\",\n
+        \ \"features\": {\n  \"forecast\": 1\n  }\n\t}\n\t\t,\n\t\"forecast\":{\n\t\t\"txt_forecast\":
+        {\n\t\t\"date\":\"8:13 AM CDT\",\n\t\t\"forecastday\": [\n\t\t{\n\t\t\"period\":0,\n\t\t\"icon\":\"cloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/cloudy.gif\",\n\t\t\"title\":\"Friday\",\n\t\t\"fcttext\":\"Overcast.
+        Slight chance of a rain shower. High 66F. Winds N at 10 to 15 mph.\",\n\t\t\"fcttext_metric\":\"Overcast.
+        Slight chance of a rain shower. High 19C. Winds N at 15 to 25 km/h.\",\n\t\t\"pop\":\"20\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":1,\n\t\t\"icon\":\"nt_cloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/nt_cloudy.gif\",\n\t\t\"title\":\"Friday
+        Night\",\n\t\t\"fcttext\":\"Cloudy. Low around 55F. Winds N at 5 to 10 mph.\",\n\t\t\"fcttext_metric\":\"Cloudy
+        skies. Low 13C. Winds N at 10 to 15 km/h.\",\n\t\t\"pop\":\"10\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":2,\n\t\t\"icon\":\"chancerain\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/chancerain.gif\",\n\t\t\"title\":\"Saturday\",\n\t\t\"fcttext\":\"Steady
+        light rain in the morning. Showers continuing in the afternoon. High near
+        65F. Winds NE at 5 to 10 mph. Chance of rain 60%.\",\n\t\t\"fcttext_metric\":\"Steady
+        light rain in the morning. Showers continuing in the afternoon. High 18C.
+        Winds NE at 10 to 15 km/h. Chance of rain 60%.\",\n\t\t\"pop\":\"60\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":3,\n\t\t\"icon\":\"nt_rain\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/nt_rain.gif\",\n\t\t\"title\":\"Saturday
+        Night\",\n\t\t\"fcttext\":\"Showers early, becoming a steady rain late. Low
+        54F. Winds NE at 5 to 10 mph. Chance of rain 80%. Rainfall around a half an
+        inch.\",\n\t\t\"fcttext_metric\":\"Showers early, becoming a steady rain late.
+        Low 12C. Winds NE at 10 to 15 km/h. Chance of rain 80%. Rainfall near 12mm.\",\n\t\t\"pop\":\"80\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":4,\n\t\t\"icon\":\"rain\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/rain.gif\",\n\t\t\"title\":\"Sunday\",\n\t\t\"fcttext\":\"Cloudy.
+        Periods of rain early. High 73F. Winds NNE at 5 to 10 mph. Chance of rain
+        80%.\",\n\t\t\"fcttext_metric\":\"Cloudy with occasional rain...mainly in
+        the morning. High 23C. Winds NNE at 10 to 15 km/h. Chance of rain 80%.\",\n\t\t\"pop\":\"80\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":5,\n\t\t\"icon\":\"nt_partlycloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/nt_partlycloudy.gif\",\n\t\t\"title\":\"Sunday
+        Night\",\n\t\t\"fcttext\":\"Partly cloudy. Low 52F. Winds SE at 5 to 10 mph.\",\n\t\t\"fcttext_metric\":\"Partly
+        cloudy. Low 11C. Winds SE at 10 to 15 km/h.\",\n\t\t\"pop\":\"10\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":6,\n\t\t\"icon\":\"clear\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/clear.gif\",\n\t\t\"title\":\"Monday\",\n\t\t\"fcttext\":\"Sunny
+        skies. High 78F. Winds SSE at 10 to 15 mph.\",\n\t\t\"fcttext_metric\":\"Mainly
+        sunny. High near 25C. Winds SSE at 10 to 15 km/h.\",\n\t\t\"pop\":\"10\"\n\t\t}\n\t\t,\n\t\t{\n\t\t\"period\":7,\n\t\t\"icon\":\"nt_clear\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/nt_clear.gif\",\n\t\t\"title\":\"Monday
+        Night\",\n\t\t\"fcttext\":\"Clear skies. Low 57F. Winds S at 10 to 15 mph.\",\n\t\t\"fcttext_metric\":\"Clear.
+        Low 14C. Winds S at 15 to 25 km/h.\",\n\t\t\"pop\":\"10\"\n\t\t}\n\t\t]\n\t\t},\n\t\t\"simpleforecast\":
+        {\n\t\t\"forecastday\": [\n\t\t{\"date\":{\n\t\"epoch\":\"1426896000\",\n\t\"pretty\":\"7:00
+        PM CDT on March 20, 2015\",\n\t\"day\":20,\n\t\"month\":3,\n\t\"year\":2015,\n\t\"yday\":78,\n\t\"hour\":19,\n\t\"min\":\"00\",\n\t\"sec\":0,\n\t\"isdst\":\"1\",\n\t\"monthname\":\"March\",\n\t\"monthname_short\":\"Mar\",\n\t\"weekday_short\":\"Fri\",\n\t\"weekday\":\"Friday\",\n\t\"ampm\":\"PM\",\n\t\"tz_short\":\"CDT\",\n\t\"tz_long\":\"America/Chicago\"\n},\n\t\t\"period\":1,\n\t\t\"high\":
+        {\n\t\t\"fahrenheit\":\"66\",\n\t\t\"celsius\":\"19\"\n\t\t},\n\t\t\"low\":
+        {\n\t\t\"fahrenheit\":\"55\",\n\t\t\"celsius\":\"13\"\n\t\t},\n\t\t\"conditions\":\"Overcast\",\n\t\t\"icon\":\"cloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/cloudy.gif\",\n\t\t\"skyicon\":\"\",\n\t\t\"pop\":20,\n\t\t\"qpf_allday\":
+        {\n\t\t\"in\": 0.00,\n\t\t\"mm\": 0\n\t\t},\n\t\t\"qpf_day\": {\n\t\t\"in\":
+        0.00,\n\t\t\"mm\": 0\n\t\t},\n\t\t\"qpf_night\": {\n\t\t\"in\": 0.00,\n\t\t\"mm\":
+        0\n\t\t},\n\t\t\"snow_allday\": {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_day\":
+        {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_night\": {\n\t\t\"in\":
+        0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"maxwind\": {\n\t\t\"mph\": 15,\n\t\t\"kph\":
+        24,\n\t\t\"dir\": \"N\",\n\t\t\"degrees\": 9\n\t\t},\n\t\t\"avewind\": {\n\t\t\"mph\":
+        11,\n\t\t\"kph\": 18,\n\t\t\"dir\": \"N\",\n\t\t\"degrees\": 9\n\t\t},\n\t\t\"avehumidity\":
+        76,\n\t\t\"maxhumidity\": 0,\n\t\t\"minhumidity\": 0\n\t\t}\n\t\t,\n\t\t{\"date\":{\n\t\"epoch\":\"1426982400\",\n\t\"pretty\":\"7:00
+        PM CDT on March 21, 2015\",\n\t\"day\":21,\n\t\"month\":3,\n\t\"year\":2015,\n\t\"yday\":79,\n\t\"hour\":19,\n\t\"min\":\"00\",\n\t\"sec\":0,\n\t\"isdst\":\"1\",\n\t\"monthname\":\"March\",\n\t\"monthname_short\":\"Mar\",\n\t\"weekday_short\":\"Sat\",\n\t\"weekday\":\"Saturday\",\n\t\"ampm\":\"PM\",\n\t\"tz_short\":\"CDT\",\n\t\"tz_long\":\"America/Chicago\"\n},\n\t\t\"period\":2,\n\t\t\"high\":
+        {\n\t\t\"fahrenheit\":\"65\",\n\t\t\"celsius\":\"18\"\n\t\t},\n\t\t\"low\":
+        {\n\t\t\"fahrenheit\":\"54\",\n\t\t\"celsius\":\"12\"\n\t\t},\n\t\t\"conditions\":\"Chance
+        of Rain\",\n\t\t\"icon\":\"chancerain\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/chancerain.gif\",\n\t\t\"skyicon\":\"\",\n\t\t\"pop\":60,\n\t\t\"qpf_allday\":
+        {\n\t\t\"in\": 0.81,\n\t\t\"mm\": 21\n\t\t},\n\t\t\"qpf_day\": {\n\t\t\"in\":
+        0.15,\n\t\t\"mm\": 4\n\t\t},\n\t\t\"qpf_night\": {\n\t\t\"in\": 0.66,\n\t\t\"mm\":
+        17\n\t\t},\n\t\t\"snow_allday\": {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_day\":
+        {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_night\": {\n\t\t\"in\":
+        0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"maxwind\": {\n\t\t\"mph\": 10,\n\t\t\"kph\":
+        16,\n\t\t\"dir\": \"NE\",\n\t\t\"degrees\": 46\n\t\t},\n\t\t\"avewind\": {\n\t\t\"mph\":
+        8,\n\t\t\"kph\": 13,\n\t\t\"dir\": \"NE\",\n\t\t\"degrees\": 46\n\t\t},\n\t\t\"avehumidity\":
+        84,\n\t\t\"maxhumidity\": 0,\n\t\t\"minhumidity\": 0\n\t\t}\n\t\t,\n\t\t{\"date\":{\n\t\"epoch\":\"1427068800\",\n\t\"pretty\":\"7:00
+        PM CDT on March 22, 2015\",\n\t\"day\":22,\n\t\"month\":3,\n\t\"year\":2015,\n\t\"yday\":80,\n\t\"hour\":19,\n\t\"min\":\"00\",\n\t\"sec\":0,\n\t\"isdst\":\"1\",\n\t\"monthname\":\"March\",\n\t\"monthname_short\":\"Mar\",\n\t\"weekday_short\":\"Sun\",\n\t\"weekday\":\"Sunday\",\n\t\"ampm\":\"PM\",\n\t\"tz_short\":\"CDT\",\n\t\"tz_long\":\"America/Chicago\"\n},\n\t\t\"period\":3,\n\t\t\"high\":
+        {\n\t\t\"fahrenheit\":\"73\",\n\t\t\"celsius\":\"23\"\n\t\t},\n\t\t\"low\":
+        {\n\t\t\"fahrenheit\":\"52\",\n\t\t\"celsius\":\"11\"\n\t\t},\n\t\t\"conditions\":\"Rain\",\n\t\t\"icon\":\"rain\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/rain.gif\",\n\t\t\"skyicon\":\"\",\n\t\t\"pop\":80,\n\t\t\"qpf_allday\":
+        {\n\t\t\"in\": 0.14,\n\t\t\"mm\": 4\n\t\t},\n\t\t\"qpf_day\": {\n\t\t\"in\":
+        0.14,\n\t\t\"mm\": 4\n\t\t},\n\t\t\"qpf_night\": {\n\t\t\"in\": 0.00,\n\t\t\"mm\":
+        0\n\t\t},\n\t\t\"snow_allday\": {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_day\":
+        {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_night\": {\n\t\t\"in\":
+        0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"maxwind\": {\n\t\t\"mph\": 10,\n\t\t\"kph\":
+        16,\n\t\t\"dir\": \"NNE\",\n\t\t\"degrees\": 12\n\t\t},\n\t\t\"avewind\":
+        {\n\t\t\"mph\": 8,\n\t\t\"kph\": 13,\n\t\t\"dir\": \"NNE\",\n\t\t\"degrees\":
+        12\n\t\t},\n\t\t\"avehumidity\": 76,\n\t\t\"maxhumidity\": 0,\n\t\t\"minhumidity\":
+        0\n\t\t}\n\t\t,\n\t\t{\"date\":{\n\t\"epoch\":\"1427155200\",\n\t\"pretty\":\"7:00
+        PM CDT on March 23, 2015\",\n\t\"day\":23,\n\t\"month\":3,\n\t\"year\":2015,\n\t\"yday\":81,\n\t\"hour\":19,\n\t\"min\":\"00\",\n\t\"sec\":0,\n\t\"isdst\":\"1\",\n\t\"monthname\":\"March\",\n\t\"monthname_short\":\"Mar\",\n\t\"weekday_short\":\"Mon\",\n\t\"weekday\":\"Monday\",\n\t\"ampm\":\"PM\",\n\t\"tz_short\":\"CDT\",\n\t\"tz_long\":\"America/Chicago\"\n},\n\t\t\"period\":4,\n\t\t\"high\":
+        {\n\t\t\"fahrenheit\":\"78\",\n\t\t\"celsius\":\"26\"\n\t\t},\n\t\t\"low\":
+        {\n\t\t\"fahrenheit\":\"57\",\n\t\t\"celsius\":\"14\"\n\t\t},\n\t\t\"conditions\":\"Clear\",\n\t\t\"icon\":\"clear\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/clear.gif\",\n\t\t\"skyicon\":\"\",\n\t\t\"pop\":10,\n\t\t\"qpf_allday\":
+        {\n\t\t\"in\": 0.00,\n\t\t\"mm\": 0\n\t\t},\n\t\t\"qpf_day\": {\n\t\t\"in\":
+        0.00,\n\t\t\"mm\": 0\n\t\t},\n\t\t\"qpf_night\": {\n\t\t\"in\": 0.00,\n\t\t\"mm\":
+        0\n\t\t},\n\t\t\"snow_allday\": {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_day\":
+        {\n\t\t\"in\": 0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"snow_night\": {\n\t\t\"in\":
+        0.0,\n\t\t\"cm\": 0.0\n\t\t},\n\t\t\"maxwind\": {\n\t\t\"mph\": 15,\n\t\t\"kph\":
+        24,\n\t\t\"dir\": \"SSE\",\n\t\t\"degrees\": 161\n\t\t},\n\t\t\"avewind\":
+        {\n\t\t\"mph\": 10,\n\t\t\"kph\": 16,\n\t\t\"dir\": \"SSE\",\n\t\t\"degrees\":
+        161\n\t\t},\n\t\t\"avehumidity\": 68,\n\t\t\"maxhumidity\": 0,\n\t\t\"minhumidity\":
+        0\n\t\t}\n\t\t]\n\t\t}\n\t}\n}\n"
+    http_version: 
+  recorded_at: Fri, 20 Mar 2015 14:08:36 GMT
+recorded_with: VCR 2.9.3
