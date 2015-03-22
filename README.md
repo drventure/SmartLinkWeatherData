@@ -38,6 +38,15 @@ end
 
 At that point, your SITE object will now have 'chance_of_rain' method that will return the highest chance of rain for the next 3 days.
 
+# Notes
+
+Please check the SmartLinkTest sub-project nested within this gem for:
+
+1. examples of how to use
+2. all of the rspec tests, plus fixtures
+3. DB Migrations for creating Site and PrecipProbability tables
+
+In particular, check the non_ar_site_spec file for an example of updating PrecipProbability in batches.
 
 
 ## Development
