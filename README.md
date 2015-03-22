@@ -48,6 +48,8 @@ Please check the SmartLinkTest sub-project nested within this gem for:
 
 In particular, check the non_ar_site_spec file for an example of updating PrecipProbability in batches.
 
+To run the tests, just CD into the SmartLinkTest folder and run 'rspec' from terminal.
+
 
 ## Development
 
