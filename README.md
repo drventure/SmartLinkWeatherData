@@ -1,8 +1,9 @@
 # SmartLinkWeatherData
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/SmartLinkWeatherData`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome!
 
-SmartLinkWeatherData Gem Description here
+This is a simple gem that enables the use of the WeatherUnderground API to retrieve the max chance of rain over the next three day.
+You can mix in the functionallity to any object (ActiveRecord or not) that supports a postal_code property.
 
 ## Installation
 
@@ -20,15 +21,28 @@ Or install it yourself as:
 
     $ gem install SmartLinkWeatherData
 
+You'll also want a SITE model and a PRECIP_PROBABILITY model (used to cache precipitation info locally)
+
+I have not pushed the gem to RubyGems, so you'll need to refer to the gem by path in the Gemfile.
+
 ## Usage
 
-Usage instructions here
+Include the gem in your Gemfile, then locate the model you'd like to extend and make it look something like the following example:
+
+```ruby
+require 'smart_link_weather_data_site_mixin'
+class Site < ActiveRecord::Base
+  include SmartLinkWeatherDataSiteMixin
+end
+```
+
+At that point, your SITE object will now have 'chance_of_rain' method that will return the highest chance of rain for the next 3 days.
+
+
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Nothing at this time.
 
 ## Contributing
 
