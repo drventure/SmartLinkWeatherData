@@ -16,6 +16,29 @@ describe NonArSite do
 
     expect(PrecipProbability.count).to eq(3)
   end
+
+  it "should be able to get precip probs in batch" do
+    #WebMock.allow_net_connect!
+
+    PrecipProbability.delete_all
+
+    VCR.use_cassette('pops_for_batch') do
+      site = NonArSite.new
+      site.postal_code = '76034'
+      sites = []
+      sites << site
+      site = NonArSite.new
+      site.postal_code = '76021'
+      sites << site
+      site = NonArSite.new
+      site.postal_code = '76103'
+      sites << site
+
+      SmartLinkWeatherData.update_batch(sites)
+    end
+
+    expect(PrecipProbability.count).to eq(9)
+  end
 end
 
 

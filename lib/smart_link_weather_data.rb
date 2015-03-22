@@ -6,10 +6,23 @@ require 'json'
 module SmartLinkWeatherData
   WU_KEY = '70d670ad87b0564a'
 
+  def self.update_batch(sites)
+    #given an array of sites, run through and update the precip probabilities for their postal codes
+    #Note that you can pass in an array of any objects, so long as they have a postal_code property
+    sites.each do |site|
+      if site.respond_to?(:postal_code)
+        SmartLinkWeatherData.update_cache(site.postal_code)
+      end
+    end
+  end
+
   def self.update_cache(postal_code)
     #we have to get the pops and save
     #NOTE LAT AND LON were mentioned but not specified as possible alternate query args
     #I've left that out for now and only use postal code.
+
+    #NOTE This method can be called separate from actually getting a chance of rain, just to
+    #be able to run through and update
     begin
       raw = get_raw_forecast(postal_code)
       days = raw['forecast']['simpleforecast']['forecastday'].take(3)
