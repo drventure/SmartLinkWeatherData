@@ -2,7 +2,7 @@ class CreatePrecipProbabilities < ActiveRecord::Migration
   def change
     create_table :precip_probabilities do |t|
       t.string :postal_code
-      t.datetime :date
+      t.date :date
       t.integer :pop
       t.float :qpf
       t.integer :high

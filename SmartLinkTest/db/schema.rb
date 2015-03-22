@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20150319003413) do
 
   create_table "precip_probabilities", force: :cascade do |t|
     t.string   "postal_code"
-    t.datetime "date"
+    t.date     "date"
     t.integer  "pop"
     t.float    "qpf"
     t.integer  "high"

@@ -8,19 +8,27 @@ module SmartLinkWeatherData
 
   def self.update_cache(postal_code)
     #we have to get the pops and save
-    raw = get_raw_forecast(postal_code)
-    days = raw['forecast']['simpleforecast']['forecastday'].take(3)
-    days.each do |d|
-      date = Date.new(d['date']['year'], d['date']['month'], d['date']['day'])
-      pop = d['pop']
-      #TODO May need celcius as well, wasn't specified
-      high = d['high']['fahrenheit']
-      low = d['low']['fahrenheit']
-      qpf = d['qpf_allday']['in']
-      PrecipProbability.create(postal_code: postal_code, date: date, pop: pop, qpf: qpf, high: high, low: low)
+    #NOTE LAT AND LON were mentioned but not specified as possible alternate query args
+    #I've left that out for now and only use postal code.
+    begin
+      raw = get_raw_forecast(postal_code)
+      days = raw['forecast']['simpleforecast']['forecastday'].take(3)
+      days.each do |d|
+        date = Date.new(d['date']['year'], d['date']['month'], d['date']['day'])
+        pop = d['pop']
+        #TODO May need celcius as well, wasn't specified
+        high = d['high']['fahrenheit']
+        low = d['low']['fahrenheit']
+        qpf = d['qpf_allday']['in']
+        PrecipProbability.create(postal_code: postal_code, date: date, pop: pop, qpf: qpf, high: high, low: low)
+      end
+      #now go ahead and return the chance_of_rain based on the service data
+      return get_max_pop(raw)
+    rescue StandardError => ex
+      #log the error and just return no chance of rain
+      #TODO May need to revisit the intention of error handling in this case
+      return 0
     end
-    #now go ahead and return the chance_of_rain based on the service data
-    return get_max_pop(raw)
   end
 
 
